@@ -6,19 +6,20 @@
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{xcolor}
+\usepackage{minted}
 
 \theoremstyle{definition}
 \newtheorem{exmp}{Example}[section]
 
 \begin{document}
-\title {CDS404 - Numerische Methoden}
-\author {Silvan Wiedmer, Daniel Schafhäutle}
+\title{CDS404 - Numerische Methoden}
+\author{Silvan Wiedmer, Daniel Schafhäutle}
 \maketitle
 
 \tableofcontents
 
 
-\section {Einführung}
+\section{Einführung}
 \subsection{Begriffe}
 \begin{itemize}
 	\item {\bfseries Numerik} \linebreak
@@ -65,5 +66,6 @@
 Der Hauptunterschied zwischen Arithmetik und Gleitkommaarithmetik besteht darin, dass Arithmetik sich auf die grundlegenden mathematischen Operationen bezieht, während Gleitkommaarithmetik eine Methode zur Darstellung und Berechnung von Zahlen ist, die auf den Anforderungen der Computerarithmetik basiert.  \\
 Arithmetik kann auf verschiedene Arten durchgeführt werden, z. B. mit ganzen Zahlen, rationalen Zahlen oder reellen Zahlen. Gleitkommaarithmetik dagegen bezieht sich speziell auf die Darstellung von reellen Zahlen und erfordert eine bestimmte Konvention für die Repräsentation von Zahlen mit einer begrenzten Anzahl von Bits.
 
+\input{code_snippets}
 
 \end{document}
