@@ -8,8 +8,7 @@ Die Numerik liefert nur Näherungsweise Ergebnisse.
 
 \subsubsection{Gleitkommazahl}
 Gleitkommazahlen bestehen aus einer festen Anzahl von Ziffern, um den Wert der Zahl anzugeben, sowie der Angabe, um wie viele Stellen das Komma nach links oder rechts verschoben werden muss, um die Zahl in der Dezimalschreibweise zu erhalten. \\
-Der Vorteil einer solchen Zahlendarstellung ist, dass mit einer festen Anzahl von ausgeschriebenen Ziffern ein großer Zahlenraum abgedeckt wird und die Zahlen trotzdem eine gute Genauigkeit behalten.\\
-
+Der Vorteil einer solchen Zahlendarstellung ist, dass mit einer festen Anzahl von ausgeschriebenen Ziffern ein großer Zahlenraum abgedeckt wird und die Zahlen trotzdem eine gute Genauigkeit behalten.
 \begin{align*}
 	12000  &=  1.2\cdot10^4 \\
 	12000 &=  1.2e4
@@ -28,13 +27,6 @@ Sie bezeichnet das Rechnen mit Gleitkommazahlen und deren Darstellung.
 	\item Basis: 10
 	\item Exponent: 4
 \end{itemize}
-\subsubsection{Unterlauf} 
-Liegt vor, wenn das Ergebnis einer Rechenoperation zwischen der kleinsten darstellbaren Zahl und null liegt, dann wird zu null abgerundet. \\
-Z.B. Wenn 8 Stellen gespeichert werden:
-\begin{displaymath}
-	1-0.999'999'99 = 0.000'000'00 {\color{red} 1}
-\end{displaymath}
-Die Eins liegt ausserhalb des gespeicherten Bereiches und fällt deswegen einfach weg. Als Ergebnis gäbe es also  0.
 
 \subsubsection{Rundungsfehler}
 Die meisten Gleitkommazahlen können nicht exakt dargestellt werden, was zu Rundungsfehlern führt, wenn solche Zahlen berechnet oder manipuliert werden. Diese Fehler entstehen durch die Notwendigkeit, die dargestellte Zahl auf die nächstgelegene darstellbare Zahl zu runden. \\
@@ -70,6 +62,20 @@ Vor der Subtraktion war der Fehler vernachlässigbar, aber jetzt ist er durch di
 
 \subsubsection{Absorption}
 Absorption geschieht, wenn sehr kleine Zahlen mit Grossen addiert/subtrahiert werden und sich der Betrag des Ergebnis nicht von dem der Grösseren unterscheidet. \\
-Was dabei geschieht ist, dass die Änderung der Zahl so weit nach dem Punkt geschiehen würde, so a
+Was dabei geschieht ist, dass die Veränderung der Zahl so weit hinten geschieht, so dass sie nach dem Umwandeln in eine Gleitkommazahl gar nicht mehr in der Zahl "vorhanden ist".
+\begin{exmp}
+	Angenommen, es werden 4 Ziffern für die Zahl gespeichert.
+	\begin{displaymath}
+		100+0.001=100.001 = 1.000'{\color{red}01} \cdot 10^2
+		\approx 1.000 * 10^2
+	\end{displaymath}
+	So fällt die eins einfach aus der Zahl heraus und geht verloren.
+\end{exmp}
 
 \subsubsection{Unterlauf}
+Liegt vor, wenn das Ergebnis einer Rechenoperation zwischen der kleinsten darstellbaren Zahl und null liegt, dann wird zu null abgerundet. \\
+Z.B. Wenn 8 Stellen gespeichert werden:
+\begin{displaymath}
+	1-0.999'999'99 = 0.000'000'00 {\color{red} 1}
+\end{displaymath}
+Die Eins liegt ausserhalb des gespeicherten Bereiches und fällt deswegen einfach weg. Als Ergebnis gäbe es also  0.
