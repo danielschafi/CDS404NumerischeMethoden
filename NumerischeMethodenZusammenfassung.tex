@@ -1,0 +1,69 @@
+
+
+
+\documentclass [final]{article}
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{xcolor}
+
+\theoremstyle{definition}
+\newtheorem{exmp}{Example}[section]
+
+\begin{document}
+\title {CDS404 - Numerische Methoden}
+\author {Daniel Schafhäutle}
+\maketitle
+
+\tableofcontents
+
+
+\section {Einführung}
+\subsection{Begriffe}
+\begin{itemize}
+	\item {\bfseries Numerik} \linebreak
+	Numerik (auch Numerische Mathematik genannt) bezeichnet den Bereich der Mathematik, der sich mit der Entwicklung und Analyse von Verfahren zur numerischen Lösung von mathematischen Problemen beschäftigt. \\
+	Dabei geht es in erster Linie darum, rechnergestützt mathematische Berechnungen durchzuführen und Ergebnisse zu erhalten, die in der Praxis anwendbar sind. \\
+	Die Numerik liefert nur Näherungsweise Ergebnisse.
+	\item {\bfseries Gleitkommazahl} \linebreak
+	Gleitkommazahlen bestehen aus einer festen Anzahl von Ziffern, um den Wert der Zahl anzugeben, sowie der Angabe, um wie viele Stellen das Komma nach links oder rechts verschoben werden muss, um die Zahl in der Dezimalschreibweise zu erhalten. \\
+	Der Vorteil einer solchen Zahlendarstellung ist, dass mit einer festen Anzahl von ausgeschriebenen Ziffern ein großer Zahlenraum abgedeckt wird und die Zahlen trotzdem eine gute Genauigkeit behalten.\\
+
+	\begin{align*}
+	12000  &=  1.2\cdot10^4 \\
+	12000 &=  1.2e4
+	\end{align*}
+
+	\item {\bfseries Gleitkommaarithmetik} \linebreak
+	Gleitkommaarithmetik ist eine Methode zur Darstellung und Berechnung von Zahlen in der Computerarithmetik, die auf der Approximation von reellen Zahlen durch Mantisse und Exponenten basiert. \\
+	Sie bezeichnet das Rechnen mit Gleitkommazahlen und deren Darstellung.
+	\item {\bfseries Basis,Mantisse,Exponent} \linebreak
+	\begin{displaymath}
+		1.2 \cdot 10^4
+	\end{displaymath}
+		\begin{itemize}
+			\item Mantisse: 1.2 \newline
+			Die Ziffernstellen einer Gleitkommazahl vor der Potenz.
+			\item Basis: 10
+			\item Exponent: 4
+		\end{itemize}
+	\item {\bfseries Unterlauf} \linebreak
+	Liegt vor, wenn das Ergebnis einer Rechenoperation zwischen der kleinsten darstellbaren Zahl und null liegt, dann wird zu null abgerundet. \\
+	Z.B. Wenn 8 Stellen gespeichert werden:
+	\begin{displaymath}
+		1-0.999'999'99 = 0.000'000'00 {\color{red} 1}
+	\end{displaymath}
+	Die Eins liegt ausserhalb des gespeicherten Bereiches und fällt deswegen einfach weg. Als Ergebnis gäbe es also  0.
+		
+	\item {\bfseries Rundungsfehler} \linebreak
+	Die meisten Gleitkommazahlen können nicht exakt dargestellt werden, was zu Rundungsfehlern führt, wenn solche Zahlen berechnet oder manipuliert werden. Diese Fehler entstehen durch die Notwendigkeit, die dargestellte Zahl auf die nächstgelegene darstellbare Zahl zu runden. \\
+	Dies kann zu einer Abweichung vom tatsächlichen Wert führen und zu inkorrekten Ergebnissen führen.
+
+\end{itemize}
+
+\subsection{Unterschied Arithmetik \& Gleitkommaarithmetik}
+Der Hauptunterschied zwischen Arithmetik und Gleitkommaarithmetik besteht darin, dass Arithmetik sich auf die grundlegenden mathematischen Operationen bezieht, während Gleitkommaarithmetik eine Methode zur Darstellung und Berechnung von Zahlen ist, die auf den Anforderungen der Computerarithmetik basiert.  \\
+Arithmetik kann auf verschiedene Arten durchgeführt werden, z. B. mit ganzen Zahlen, rationalen Zahlen oder reellen Zahlen. Gleitkommaarithmetik dagegen bezieht sich speziell auf die Darstellung von reellen Zahlen und erfordert eine bestimmte Konvention für die Repräsentation von Zahlen mit einer begrenzten Anzahl von Bits.
+
+
+\end{document}
