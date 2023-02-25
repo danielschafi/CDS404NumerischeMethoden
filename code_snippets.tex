@@ -1,0 +1,45 @@
+\section{Code Snippets}
+
+\subsection{numpy}
+
+\paragraph{import}
+
+\begin{minted}{python}
+import numpy as np
+\end{minted}
+
+\subsubsection{linspace}
+
+\begin{minted}{python}
+np.linspace(start, stop, num=50)
+\end{minted}
+
+\subsection{matplotlib}
+
+\subsubsection{import}
+
+\begin{minted}{python}
+import matplotlib.pyplot as plt
+\end{minted}
+
+\subsubsection{rcParams}
+
+Mit den \textbf{rcParams} kann die visualisierung beliebig konfiguriert werden.
+
+\begin{minted}{python}
+plt.rcParams['figure.figsize'] = (7.03, 15)
+plt.rcParams['font.size'] = 9
+plt.rcParams['font.family'] = 'serif'
+plt.rcParams['text.usetex'] = True
+\end{minted}
+
+\subsubsection{plot}
+
+\begin{minted}{python}
+plt.plot(x_data, y_data, '--', linewidth=3, label=r'$g$')
+plt.xlabel(r'$x$')
+plt.ylabel(r'$y$')
+plt.legend()
+plt.grid(visible=True)
+plt.axis('image')
+\end{minted}
