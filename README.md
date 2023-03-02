@@ -2,13 +2,14 @@
 
 Zusammenfassung des Moduls Numerische Methoden
 
-# Autoren
+## Autoren
+
 + Silvan Wiedmer
 + Daniel Schafhäutle
 
-# Probleme
+## Probleme
 
-## Minted Package
+### Minted Package
 
 Beim der verwendung des `minted` packets gab es bei mir zwei fehler.
 
