@@ -43,3 +43,23 @@ plt.legend()
 plt.grid(visible=True)
 plt.axis('image')
 \end{minted}
+
+\subsection{scipy}
+
+\subsubsection{import}
+
+\begin{minted}{python}
+import scipy.interpolate as ip
+\end{minted}
+
+\subsubsection{Polynom interpolation}
+
+\begin{minted}{python}
+po = ip.BarycentricInterpolator(x_data, y_data)
+\end{minted}
+
+\subsubsection{Cubic Spline}
+
+\begin{minted}{python}
+cs = ip.CubicSpline(x_data, y_data)
+\end{minted}
