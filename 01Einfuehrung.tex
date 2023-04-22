@@ -1,4 +1,5 @@
 \section {Einführung}
+
 \subsection{Begriffe}
 
 \subsubsection{Numerik}
@@ -79,3 +80,21 @@ Z.B. Wenn 8 Stellen gespeichert werden:
 	1-0.999'999'99 = 0.000'000'00 {\color{red} 1}
 \end{displaymath}
 Die Eins liegt ausserhalb des gespeicherten Bereiches und fällt deswegen einfach weg. Als Ergebnis gäbe es also  0.
+
+\subsection{Fixpunkt Iteration}
+
+\begin{displaymath}
+	f(x) = x
+\end{displaymath}
+
+\paragraph{Heron-Verfahren}
+
+\begin{displaymath}
+	x = f(x) = \frac{1}{2} \cdot \biggl ( x + \frac{2}{x} \biggr )
+\end{displaymath}
+
+\paragraph{Banach-Fixpunkt-Satz}
+
+\begin{displaymath}
+	|f(x_2) - f(x_1)| \leq	m \cdot |x_2 - x_1|
+\end{displaymath}
