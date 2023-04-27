@@ -26,6 +26,12 @@ np.polyfit(x_data, y_data, grad)
 np.polyval(polynom, x_data)
 \end{minted}
 
+\subsubsection{trapz}
+
+\begin{minted}{python}
+np.trapz(y_data, x_data)
+\end{minted}
+
 \subsection{matplotlib}
 
 \subsubsection{import}
@@ -62,6 +68,7 @@ plt.axis('image')
 
 \begin{minted}{python}
 import scipy.interpolate as ip
+import scipy.integrate as ig
 \end{minted}
 
 \subsubsection{Polynom interpolation}
@@ -74,4 +81,10 @@ po = ip.BarycentricInterpolator(x_data, y_data)
 
 \begin{minted}{python}
 cs = ip.CubicSpline(x_data, y_data)
+\end{minted}
+
+\subsubsection{Simpson Regel}
+
+\begin{minted}{python}
+I = ig.simps(y_data, x_data)
 \end{minted}

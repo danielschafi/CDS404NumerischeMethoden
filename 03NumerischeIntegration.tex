@@ -1,0 +1,52 @@
+\section{Numerische Integration}
+
+Ist die Stammfunktion nicht bekannt, so kann das Integral durch eine
+einfachere funktion approximiert werden.
+
+Dabei wird die Annäherung durch die folgenden Funktionen realisiert.
+
+\begin{itemize}
+    \item konstante Funktion
+    \item lineare Funktion
+    \item quadratische Funktion
+\end{itemize}
+
+\subsection{Konstante Funktion}
+
+\paragraph{Links}
+
+\begin{displaymath}
+    I = h \sum_{k=0}^{n-1} f(x_k)
+\end{displaymath}
+
+\paragraph{Rechts}
+
+\begin{displaymath}
+    I = h \sum_{k=1}^{n} f(x_k)
+\end{displaymath}
+
+\paragraph{Mittelpunkt}
+
+\begin{displaymath}
+    I = h \sum_{k=0}^{n-1} f \biggl (\frac{x_k + x_{k+1}}{2} \biggr )
+\end{displaymath}
+
+\subsection{Lineare Funktion (Trapez Regel)}
+
+\paragraph{Allgemein}
+
+\begin{displaymath}
+	I = \frac{1}{2} \sum_{k=0}^{n-1} (x_{k+1} - x_k) \cdot (f(x_{k+1}) + f(x_k))
+\end{displaymath}
+
+\paragraph{Äquidistante X-Werte}
+
+\begin{displaymath}
+	I = \frac{h}{2} \sum_{k=0}^{n-1} (f(x_{k+1}) + f(x_k))
+\end{displaymath}
+
+\subsection{Quadratische Funktion (Simpson Regel)}
+
+\begin{displaymath}
+	A_k = \frac{h}{3} (f(x_{k-1}) + 4f(x_k) + f(x_{k-1}))
+\end{displaymath}
