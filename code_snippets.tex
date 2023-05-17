@@ -69,6 +69,7 @@ plt.axis('image')
 \begin{minted}{python}
 import scipy.interpolate as ip
 import scipy.integrate as ig
+from scipy import linalg
 \end{minted}
 
 \subsubsection{Polynom interpolation}
@@ -87,4 +88,10 @@ cs = ip.CubicSpline(x_data, y_data)
 
 \begin{minted}{python}
 I = ig.simps(y_data, x_data)
+\end{minted}
+
+\subsubsection{LR-Zerlegung}
+
+\begin{minted}{python}
+[P, L, R] = linalg.lu(A)
 \end{minted}
