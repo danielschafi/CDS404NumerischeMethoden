@@ -32,6 +32,12 @@ np.polyval(polynom, x_data)
 np.trapz(y_data, x_data)
 \end{minted}
 
+\subsubsection{QR-Zerlegung}
+
+\begin{minted}{python}
+[Q, R] = np.linalg.qr(A)
+\end{minted}
+
 \subsection{matplotlib}
 
 \subsubsection{import}
@@ -94,4 +100,10 @@ I = ig.simps(y_data, x_data)
 
 \begin{minted}{python}
 [P, L, R] = linalg.lu(A)
+\end{minted}
+
+\subsubsection{QR-Zerlegung}
+
+\begin{minted}{python}
+[Q, R] = linalg.qr(A)
 \end{minted}
